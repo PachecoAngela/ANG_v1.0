@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You Message</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url(img/E-mail\ Form.png);
+            background-size: cover;
+         }
+
+        .text {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 500px;
+            height: 95px;
+            font-family: 'Indie Flower', cursive;
+            text-align: center;
+            padding: 250px;
+            color:#707BFB;
+            font-size: 60px;
+            text-shadow: 10px 10px 15px grey;
+            font-weight: 700;
+            animation-name: aparecer;
+            animation-duration: 2.5s;
+        }
+
+        @keyframes aparecer {
+            from { 
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="text">
+    <br />
+    Thank You For Your Message! 
+    <br />
+    See You Soon!  <i class="far fa-grin-wink"></i>
+    </div>
+</body>
+</html>
