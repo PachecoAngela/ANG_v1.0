@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal_slideshow</title>
+
+    <script src="personal_slideshow.js"></script>
+    <link href="personal_slideshow.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+<body>
+        <div class="barra">
+            <a href="https://www.logogenio.pt/design-de-logotipo"><i class="fas fa-angle-double-right"></i> Criar um logo</a>
+            <a href="https://www.logogenio.pt/"><i class="fas fa-home"></i> Início</a>
+            <div class="abrir">
+                <button class="botaoabrir"><i class="fas fa-bahai"></i> Logogenie</button>
+                <div class="links">
+                    <a href="https://www.logogenio.pt/blogue">Blogue</a>
+                    <a href="https://www.logogenio.pt/tutoriais">Videos</a>
+                </div>
+            </div>
+        </div>
+
+    <div class="texto">
+        <h1>Logos</h1>
+        <br>
+        Os filósofos gregos antigos usavam o termo de maneiras diferentes. Os sofistas usaram o termo para significar discurso; Aristóteles 
+        aplicou o termo para se referir ao "discurso fundamentado" ou "o argumento" no campo da retórica e o considerou um dos três modos de 
+        persuasão ao lado do ethos e do pathos. Os filósofos estóicos identificaram o termo com o princípio divino de animação que permeia o Universo. 
+        Dentro do judaísmo helenístico, Fílon de Alexandria ( 20 a.C. - 50 d.C.) adotou o termo em filosofia judaica. O Evangelho de João identifica 
+        o Logos, através do qual todas as coisas são feitas, como divinas (theos), e identifica ainda mais Jesus Cristo como o Logos encarnado. 
+        O termo também é usado no Sufismo e na psicologia analítica de Carl Jung.
+    </div>
+    <br/><br/>
+
+    <div class="mySlideShow">
+        <div class="mySlide fade">
+            <div class="myNumber">1/4</div>
+            <img class="myImage" src="img/Design sem nome (1).png" />
+            <!--<div class="myText">Título 1</div>-->
+        </div>
+        <div class="mySlide fade">
+            <div class="myNumber">2/4</div>
+            <img class="myImage" src="img/Design sem nome (2).png" />
+            <!--<div class="myText">Título 2</div>-->
+        </div>
+        <div class="mySlide fade">
+            <div class="myNumber">3/4</div>
+            <img class="myImage" src="img/Design sem nome (3).png" />
+            <!--<div class="myText">Título 3</div>-->
+        </div>
+        <div class="mySlide fade">
+            <div class="myNumber">4/4</div>
+            <img class="myImage" src="img/Design sem nome.png" />
+            <!--<div class="myText">Título 4</div>-->
+        </div>
+
+        <a class="prevBtn" onclick="nextSlide(-1)">&#10094;</a>
+        <a class="nextBtn" onclick="nextSlide(1)">&#10095;</a>
+    </div>
+
+    <div class="myNav">
+        <span class="myDot" onclick="currentSlide(1)"></span>
+        <span class="myDot" onclick="currentSlide(2)"></span>
+        <span class="myDot" onclick="currentSlide(3)"></span>
+        <span class="myDot" onclick="currentSlide(4)"></span>
+    </div>
+    <br>
+    <div class="ThumbImage">
+        <div class="myThumb">
+            <img class="myThumbImage" onclick="currentSlide(1)" src="img/Design sem nome (1).png" />
+        </div>
+        <div class="myThumb">
+            <img class="myThumbImage" onclick="currentSlide(2)" src="img/Design sem nome (2).png" />
+        </div>
+        <div class="myThumb">
+            <img class="myThumbImage" onclick="currentSlide(3)" src="img/Design sem nome (3).png" />
+        </div>
+        <div class="myThumb">
+            <img class="myThumbImage" onclick="currentSlide(4)" src="img/Design sem nome.png" />
+        </div>
+    </div>
+
+    <script>
+        showSlide(slideIndex);
+    </script>
+</body>
+</html>
