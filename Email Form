@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de e-mail</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+<style>
+    body {
+        margin: 0 auto;
+    }
+
+    form {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        position: relative;
+        font-family: 'Indie Flower', cursive;
+        text-align: center;
+        font-size: 30px;
+        background: url(img/E-mail\ Form.png);
+        background-size: cover;
+        color: #707BFB;
+        font-weight: bold;
+        padding: 200px;
+        animation-name: arrastar;
+        animation-duration: 1s;
+        animation-direction: reverse;
+    }
+
+    button {
+        font-family: 'Indie Flower', cursive;
+        font-size: 23px;
+        border-style: inset;
+        cursor: pointer;
+        box-shadow: 10px 10px 8px grey;
+    } 
+
+    button:hover {
+        transform: scale(1.5,1.5);
+        border-radius: 10%;
+        transition-duration: 0.5s;
+    }
+
+    @keyframes arrastar {
+        from {
+            margin-top: 0;
+        }
+        to {
+            margin-top: 50%;
+        }
+    }
+    
+</style>
+</head>
+<body>
+    <form action="https://formsubmit.co/angela_pacheco3@hotmail.com" target="_blank" method="post" autocomplete="on">
+        <br /><br />
+        <div class="form">
+            <label for="name">Full Name</label><br />
+                <input type="text" id="name" name="name" size="24"><br />
+            <label>E-mail adress</label><br />
+                <input type="email" id="email" name="email" size="24"><br />
+            <label>How can we help ?</label><br />
+                <textarea id="message" name="message" maxlength="200"></textarea><br /><br />
+            <button type="submit" value="Send">Send</button>
+            <button type="reset" value="Reset">Reset</button>
+            <input type="hidden" id="_next" name="_next" value="http://127.0.0.1:5500/thankyou.html">
+        </div>
+    </form>
+</body>
+</html>
