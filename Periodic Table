@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Periodica</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Miltonian&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />      
+
+    <style>
+        body {
+           background-image: url(img/Sem\ Título.png);
+        }
+
+        .titulo {
+            font-size: 40px;
+            color: rgb(0,66,156);
+            font-weight: 600;
+            font-family: 'Miltonian', cursive;
+            text-shadow: 10px 5px 4px rgb(117, 117, 117);
+            letter-spacing: 6px;
+        }
+
+        table {
+            margin: 20px auto;
+        }
+
+        td,tr {
+            border-style: outset;
+            padding: 11px;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 5%;
+            font-family: 'Slabo 27px', serif;
+            cursor: pointer;
+        }
+
+        .NaoMetais {
+            background-color: rgb(169,234,128);
+
+        }
+
+        .NaoMetais:hover {
+            transform: scale(1.7,1.7);
+            transition-duration: 0.5s;
+            border-radius: 10%;
+            filter:drop-shadow(8px 8px 20px black);
+
+        }
+
+        .MetaisAlcalinos {
+            background-color: rgb(253,203,89);
+        }
+
+        .MetaisAlcalinos:hover {
+            transform: scale(1.7,1.7);
+            transition-duration: 0.5s;
+            border-radius: 10%;
+            filter:drop-shadow(8px 8px 20px black);
+        }
+
+        .SemiMetais {
+            background-color: rgb(105,205,182);
+        }
+
+        .SemiMetais:hover {
+            transform: scale(1.7,1.7);
+            transition-duration: 0.5s;
+            border-radius: 10%;
+            filter:drop-shadow(8px 8px 20px black);
+        }
+
+        .OutrosMetais {
+            background-color: rgb(165, 208, 219);
+        }
+
+        .OutrosMetais:hover {
+            transform: scale(1.7,1.7);
+            transition-duration: 0.5s;
+            border-radius: 10%;
+            filter:drop-shadow(8px 8px 20px black);
+        }
+
+        .Lantanideos {
+            background-color: rgb(113,246,230);
+        }
+
+        .Lantanideos:hover {
+            transform: scale(1.7,1.7);
+            transition-duration: 0.5s;
+            border-radius: 10%;
+            filter:drop-shadow(8px 8px 20px black);
+        }
+
+        .GasesNobres {
+            background-color: rgb(60,179,246);
+        }
+
+        .GasesNobres:hover {
+            transform: scale(1.7,1.7);
+            transition-duration: 0.5s;
+            border-radius: 10%;
+            filter:drop-shadow(8px 8px 20px black);
+        }
+
+        .MetaisAlcalino_Terrosos {
+            background-color: rgb(243,232,66);
+        }
+
+        .MetaisAlcalino_Terrosos:hover {
+            transform: scale(1.7,1.7);
+            transition-duration: 0.5s;
+            border-radius: 10%;
+            filter:drop-shadow(8px 8px 20px black);
+        }
+
+        .Halogenios {
+            background-color: rgb(0,218,249);
+        }
+
+        .Halogenios:hover {
+            transform: scale(1.7,1.7);
+            transition-duration: 0.5s;
+            border-radius: 10%;
+            filter:drop-shadow(8px 8px 20px black);
+        }
+
+        .MetaisdeTransicao {
+            background-color: rgb(243,161,198);
+        }
+
+        .MetaisdeTransicao:hover {
+            transform: scale(1.7,1.7);
+            transition-duration: 0.5s;
+            border-radius: 10%;
+            filter:drop-shadow(8px 8px 20px black);
+        }
+
+        .Actinidios {
+            background-color: rgb(230,158,232);
+        }
+
+        .Actinidios:hover {
+            transform: scale(1.7,1.7);
+            transition-duration: 0.5s;
+            border-radius: 10%;
+            filter:drop-shadow(8px 8px 20px black);
+        }
+
+        .clean {
+            display: none;
+            height: 60px;
+            border: 3px solid gray;
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            color: rgba(0,0,0,0.8);
+            padding: 28px;
+            box-shadow: 15px 15px 12px gray;
+          }
+    </style>
+
+    <script>
+        function showinfo(info) {
+            document.getElementById(info).style.display = 'block';
+        }
+
+        function cleaninfo(info) {
+            document.getElementById(info).style.display = 'none';
+        }
+    </script>
+
+</head>
+<body>
+    <table>
+        <caption class="titulo">Tabela Periódica</caption>
+        <tr>
+            <td onmouseover="showinfo('H')" onmouseout="cleaninfo('H')" class="NaoMetais">1<br>&nbsp;&nbsp;<b>H</b></td>
+            <td colspan="16" style="border-style: none;"></td>
+            <td onmouseover="showinfo('He')" onmouseout="cleaninfo('He')" class="GasesNobres">2<br>&nbsp;&nbsp;<b>He</b></td>
+        </tr>  
+        <tr>
+            <td onmouseover="showinfo('Li')" onmouseout="cleaninfo('Li')" class="MetaisAlcalinos">3<br>&nbsp;&nbsp;<b>Li</b></td>
+            <td onmouseover="showinfo('Be')" onmouseout="cleaninfo('Be')" class="MetaisAlcalino_Terrosos">4<br>&nbsp;&nbsp;<b>Be</b></td>
+            <td colspan="10" rowspan="2" style="border-style: none;">
+                <div id="H" class="NaoMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Hidrogénio<br />massa atómica: 1.008<br /></div>
+                <div id="He" class="GasesNobres clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Hélio<br />massa atómica: 4.003<br /></div>
+                <div id="Li" class="MetaisAlcalinos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Lítio<br />massa atómica: 6.941<br /></div>
+                <div id="Be" class="MetaisAlcalino_Terrosos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Berílio<br />massa atómica: 9.012<br /></div>
+                <div id="B" class="SemiMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Boro<br />massa atómica: 10.811<br /></div>
+                <div id="C" class="NaoMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Carbono<br />massa atómica: 12.011<br /></div>
+                <div id="N" class="NaoMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Nitrogénio<br />massa atómica: 14.007<br /></div>
+                <div id="O" class="NaoMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Oxigénio<br />massa atómica: 15.999<br /></div>
+                <div id="F" class="Halogenios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Flúor<br />massa atómica: 18.998<br /></div>
+                <div id="Ne" class="GasesNobres clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Néon<br />massa atómica: 20.180<br /></div>
+                <div id="Na" class="MetaisAlcalinos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Sódio<br />massa atómica: 22.990<br /></div>
+                <div id="Mg" class="MetaisAlcalino_Terrosos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Magnésio<br />massa atómica: 24.305<br /></div>
+                <div id="Al" class="OutrosMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Alumínio<br />massa atómica: 26.982<br /></div>
+                <div id="Si" class="SemiMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Silício<br />massa atómica: 28.085<br /></div>
+                <div id="P" class="NaoMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Fósforo<br />massa atómica: 30.974<br /></div>
+                <div id="S" class="NaoMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Enxofre<br />massa atómica: 32.060<br /></div>
+                <div id="Cl" class="Halogenios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Cloro<br />massa atómica: 35.450<br /></div>
+                <div id="Ar" class="GasesNobres clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Árgon<br />massa atómica: 39.948<br /></div>
+                <div id="K" class="MetaisAlcalinos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Potássio<br />massa atómica: 39.098<br /></div>
+                <div id="Ca" class="MetaisAlcalino_Terrosos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Cálcio<br />massa atómica: 40.078<br /></div>
+                <div id="Sc" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Escândio<br />massa atómica: 44.956<br /></div>
+                <div id="Ti" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Titânio<br />massa atómica: 47.867<br /></div>
+                <div id="V" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Vanádio<br />massa atómica: 50.942<br /></div>
+                <div id="Cr" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Cromo<br />massa atómica: 51.996<br /></div>
+                <div id="Mn" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Manganês<br />massa atómica: 54.938<br /></div>
+                <div id="Fe" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Ferro<br />massa atómica: 55.845<br /></div>
+                <div id="Co" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Cobalto<br />massa atómica: 58.933<br /></div>
+                <div id="Ni" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Níquel<br />massa atómica: 58.693<br /></div>
+                <div id="Cu" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Cobre<br />massa atómica: 63.546<br /></div>
+                <div id="Zn" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Zinco<br />massa atómica: 65.380<br /></div>
+                <div id="Ga" class="OutrosMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Gálio<br />massa atómica: 69.723<br /></div>
+                <div id="Ge" class="SemiMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Germânio<br />massa atómica: 72.630<br /></div>
+                <div id="As" class="SemiMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Arsênio<br />massa atómica: 74.922<br /></div>
+                <div id="Se" class="NaoMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Selênio<br />massa atómica: 78.971<br /></div>
+                <div id="Br" class="Halogenios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Bromo<br />massa atómica: 79.904<br /></div>
+                <div id="Kr" class="GasesNobres clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Crípton<br />massa atómica: 83.798<br /></div>
+                <div id="Rb" class="MetaisAlcalinos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Rubídio<br />massa atómica: 85.468<br /></div>
+                <div id="Sr" class="MetaisAlcalino_Terrosos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Estrôncio<br />massa atómica: 87.620<br /></div>
+                <div id="Y" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Ítrio<br />massa atómica: 88.906<br /></div>
+                <div id="Zr" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Zircônio<br />massa atómica: 91.224<br /></div>
+                <div id="Nb" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Nióbio<br />massa atómica: 92.906<br /></div>
+                <div id="Mo" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Molibdênio<br />massa atómica: 95.950<br /></div>
+                <div id="Tc" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Tecnécio<br />massa atómica: 98.000<br /></div>
+                <div id="Ru" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Rutênio<br />massa atómica: 101.070<br /></div>
+                <div id="Rh" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Ródio<br />massa atómica: 102.910<br /></div>
+                <div id="Pd" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Paládio<br />massa atómica: 106.420<br /></div>
+                <div id="Ag" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Prata<br />massa atómica: 107.870<br /></div>
+                <div id="Cd" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Cádmio<br />massa atómica: 112.410<br /></div>
+                <div id="In" class="OutrosMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Índio<br />massa atómica: 114.820<br /></div>
+                <div id="Sn" class="OutrosMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Estanho<br />massa atómica: 118.710<br /></div>
+                <div id="Sb" class="SemiMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Antimônio<br />massa atómica: 121.760<br /></div>
+                <div id="Te" class="SemiMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Telúrio<br />massa atómica: 127.600<br /></div>
+                <div id="I" class="Halogenios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Iodo<br />massa atómica: 126.900<br /></div>
+                <div id="Xe" class="GasesNobres clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Xenônio<br />massa atómica: 131.290<br /></div>
+                <div id="Cs" class="MetaisAlcalinos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Césio<br />massa atómica: 132.910<br /></div>
+                <div id="Ba" class="MetaisAlcalino_Terrosos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Bário<br />massa atómica: 137.330<br /></div>
+                <div id="Hf" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Háfnio<br />massa atómica: 178.490<br /></div>
+                <div id="Ta" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Tântalo<br />massa atómica: 180.950<br /></div>
+                <div id="W" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Tungstênio<br />massa atómica: 183.840<br /></div>
+                <div id="Re" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Rênio<br />massa atómica: 186.210<br /></div>
+                <div id="Os" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Ósmio<br />massa atómica: 190.230<br /></div>
+                <div id="Ir" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Irídio<br />massa atómica: 192.220<br /></div>
+                <div id="Pt" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Platina<br />massa atómica: 195.080<br /></div>
+                <div id="Au" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Ouro<br />massa atómica: 196.970<br /></div>
+                <div id="Hg" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Mercúrio<br />massa atómica: 200.590<br /></div>
+                <div id="Tl" class="OutrosMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Tálio<br />massa atómica: 204.380<br /></div>
+                <div id="Pb" class="OutrosMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Chumbo<br />massa atómica: 207.200<br /></div>
+                <div id="Bi" class="OutrosMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Bismuto<br />massa atómica: 208.980<br /></div>
+                <div id="Po" class="SemiMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Polônio<br />massa atómica: 209.000<br /></div>
+                <div id="At" class="Halogenios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Ástato<br />massa atómica: 210.000<br /></div>
+                <div id="Rn" class="GasesNobres clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Rádon<br />massa atómica: 222.000<br /></div>
+                <div id="Fr" class="MetaisAlcalinos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Frâncio<br />massa atómica: 223.000<br /></div>
+                <div id="Ra" class="MetaisAlcalino_Terrosos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Rádio<br />massa atómica: 226.000<br /></div>
+                <div id="Rf" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Rutherfórdio<br />massa atómica: 267.000<br /></div>
+                <div id="Db" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Dúbnio<br />massa atómica: 268.000<br /></div>
+                <div id="Sg" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Seabórgio<br />massa atómica: 269.000<br /></div>
+                <div id="Bh" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Bóhrio<br />massa atómica: 270.000<br /></div>
+                <div id="Hs" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Hássio<br />massa atómica: 277.000<br /></div>
+                <div id="Mt" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Meitnério<br />massa atómica: 278.000<br /></div>
+                <div id="Ds" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Darmstádtio<br />massa atómica: 281.000<br /></div>
+                <div id="Rg" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Roentgênio<br />massa atómica: 282.000<br /></div>
+                <div id="Cn" class="MetaisdeTransicao clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Copernício<br />massa atómica: 285.000<br /></div>
+                <div id="Nh" class="OutrosMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Nihonium<br />massa atómica: 286.000<br /></div>
+                <div id="Fl" class="OutrosMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Fleróvio<br />massa atómica: 289.000<br /></div>
+                <div id="Mc" class="OutrosMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Moscóvio<br />massa atómica: 290.000<br /></div>
+                <div id="Lv" class="OutrosMetais clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Livermório<br />massa atómica: 293.000<br /></div>
+                <div id="Ts" class="Halogenios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Tenesso<br />massa atómica: 294.000<br /></div>
+                <div id="Og" class="GasesNobres clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Oganesson<br />massa atómica: 294.000<br /></div>
+                <div id="La" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Lantânio<br />massa atómica: 138.910<br /></div>
+                <div id="Ce" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Cério<br />massa atómica: 140.120<br /></div>
+                <div id="Pr" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Praseodímio<br />massa atómica: 140.910<br /></div>
+                <div id="Nd" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Neodímio<br />massa atómica: 144.240<br /></div>
+                <div id="Pm" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Promécio<br />massa atómica: 145.000<br /></div>
+                <div id="Sm" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Samário<br />massa atómica: 150.360<br /></div>
+                <div id="Eu" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Európio<br />massa atómica: 151.960<br /></div>
+                <div id="Gd" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Gadolínio<br />massa atómica: 157.250<br /></div>
+                <div id="Tb" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Térbio<br />massa atómica: 158.930<br /></div>
+                <div id="Dy" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Disprósio<br />massa atómica: 162.500<br /></div>
+                <div id="Ho" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Hólmio<br />massa atómica: 164.930<br /></div>
+                <div id="Er" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Érbio<br />massa atómica: 167.260<br /></div>
+                <div id="Tm" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Túlio<br />massa atómica: 168.930<br /></div>
+                <div id="Yb" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Itérbio<br />massa atómica: 173.050<br /></div>
+                <div id="Lu" class="Lantanideos clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Lutécio<br />massa atómica: 174.970<br /></div>
+                <div id="Ac" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Actínio<br />massa atómica: 227.000<br /></div>
+                <div id="Th" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Tório<br />massa atómica: 232.040<br /></div>
+                <div id="Pa" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Protactínio<br />massa atómica: 231.040<br /></div>
+                <div id="U" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Urânio<br />massa atómica: 238.030<br /></div>
+                <div id="Np" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Neptúnio<br />massa atómica: 237.000<br /></div>
+                <div id="Pu" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Plutónio<br />massa atómica: 244.000<br /></div>
+                <div id="Am" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Amerício<br />massa atómica: 243.000<br /></div>
+                <div id="Cm" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Cúrio<br />massa atómica: 247.000<br /></div>
+                <div id="Bk" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Berquélio<br />massa atómica: 247.000<br /></div>
+                <div id="Cf" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Califórnio<br />massa atómica: 251.000<br /></div>
+                <div id="Es" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Einstênio<br />massa atómica: 252.000<br /></div>
+                <div id="Fm" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Férmio<br />massa atómica: 257.000<br /></div>
+                <div id="Md" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Mendelévio<br />massa atómica: 258.000<br /></div>
+                <div id="No" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Nobélio<br />massa atómica: 259.000<br /></div>
+                <div id="Lr" class="Actinidios clean"><i class="fas fa-flask"></i>&nbsp;&nbsp;Laurêncio<br />massa atómica: 266.000<br /></div>
+            </td>
+            <td onmouseover="showinfo('B')" onmouseout="cleaninfo('B')" class="SemiMetais">5<br>&nbsp;&nbsp;<b>B</b></td>
+            <td onmouseover="showinfo('C')" onmouseout="cleaninfo('C')" class="NaoMetais">6<br>&nbsp;&nbsp;<b>C</b></td>
+            <td onmouseover="showinfo('N')" onmouseout="cleaninfo('N')" class="NaoMetais">7<br>&nbsp;&nbsp;<b>N</b></td>
+            <td onmouseover="showinfo('O')" onmouseout="cleaninfo('O')" class="NaoMetais">8<br>&nbsp;&nbsp;<b>O</b></td>
+            <td onmouseover="showinfo('F')" onmouseout="cleaninfo('F')" class="Halogenios">9<br>&nbsp;&nbsp;<b>F</b></td>
+            <td onmouseover="showinfo('Ne')" onmouseout="cleaninfo('Ne')" class="GasesNobres">10<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ne</b></td>
+        </tr>   
+        <tr>
+            <td onmouseover="showinfo('Na')" onmouseout="cleaninfo('Na')" class="MetaisAlcalinos">11<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Na</b></td>
+            <td onmouseover="showinfo('Mg')" onmouseout="cleaninfo('Mg')" class="MetaisAlcalino_Terrosos">12<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Mg</b></td>
+            <td onmouseover="showinfo('Al')" onmouseout="cleaninfo('Al')" class="OutrosMetais">13<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Al</b></td>
+            <td onmouseover="showinfo('Si')" onmouseout="cleaninfo('Si')" class="SemiMetais">14<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Si</b></td>
+            <td onmouseover="showinfo('P')" onmouseout="cleaninfo('P')" class="NaoMetais">15<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>P</b></td>
+            <td onmouseover="showinfo('S')" onmouseout="cleaninfo('S')" class="NaoMetais">16<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>S</b></td>
+            <td onmouseover="showinfo('Cl')" onmouseout="cleaninfo('Cl')" class="Halogenios">17<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cl</b></td>
+            <td onmouseover="showinfo('Ar')" onmouseout="cleaninfo('Ar')" class="GasesNobres">18<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ar</b></td>
+        </tr>   
+        <tr>
+            <td onmouseover="showinfo('K')" onmouseout="cleaninfo('K')" class="MetaisAlcalinos">19<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>K</b></td>
+            <td onmouseover="showinfo('Ca')" onmouseout="cleaninfo('Ca')" class="MetaisAlcalino_Terrosos">20<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ca</b></td>
+            <td onmouseover="showinfo('Sc')" onmouseout="cleaninfo('Sc')" class="MetaisdeTransicao">21<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Sc</b></td>
+            <td onmouseover="showinfo('Ti')" onmouseout="cleaninfo('Ti')" class="MetaisdeTransicao">22<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ti</b></td>
+            <td onmouseover="showinfo('V')" onmouseout="cleaninfo('V')" class="MetaisdeTransicao">23<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>V</b></td>
+            <td onmouseover="showinfo('Cr')" onmouseout="cleaninfo('Cr')" class="MetaisdeTransicao">24<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cr</b></td>
+            <td onmouseover="showinfo('Mn')" onmouseout="cleaninfo('Mn')" class="MetaisdeTransicao">25<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Mn</b></td>
+            <td onmouseover="showinfo('Fe')" onmouseout="cleaninfo('Fe')" class="MetaisdeTransicao">26<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Fe</b></td>
+            <td onmouseover="showinfo('Co')" onmouseout="cleaninfo('Co')" class="MetaisdeTransicao">27<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Co</b></td>
+            <td onmouseover="showinfo('Ni')" onmouseout="cleaninfo('Ni')" class="MetaisdeTransicao">28<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ni</b></td>
+            <td onmouseover="showinfo('Cu')" onmouseout="cleaninfo('Cu')" class="MetaisdeTransicao">29<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cu</b></td>
+            <td onmouseover="showinfo('Zn')" onmouseout="cleaninfo('Zn')" class="MetaisdeTransicao">30<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Zn</b></td> 
+            <td onmouseover="showinfo('Ga')" onmouseout="cleaninfo('Ga')" class="OutrosMetais">31<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ga</b></td>
+            <td onmouseover="showinfo('Ge')" onmouseout="cleaninfo('Ge')" class="SemiMetais">32<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ge</b></td>
+            <td onmouseover="showinfo('As')" onmouseout="cleaninfo('As')" class="SemiMetais">33<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>As</b></td>
+            <td onmouseover="showinfo('Se')" onmouseout="cleaninfo('Se')" class="NaoMetais">34<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Se</b></td>
+            <td onmouseover="showinfo('Br')" onmouseout="cleaninfo('Br')" class="Halogenios">35<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Br</b></td>
+            <td onmouseover="showinfo('Kr')" onmouseout="cleaninfo('Kr')" class="GasesNobres">36<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Kr</b></td>
+        </tr>   
+        <tr>
+            <td onmouseover="showinfo('Rb')" onmouseout="cleaninfo('Rb')" class="MetaisAlcalinos">37<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Rb</b></td>
+            <td onmouseover="showinfo('Sr')" onmouseout="cleaninfo('Sr')" class="MetaisAlcalino_Terrosos">38<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Sr</b></td>
+            <td onmouseover="showinfo('Y')" onmouseout="cleaninfo('Y')" class="MetaisdeTransicao">39<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Y</b></td>
+            <td onmouseover="showinfo('Zr')" onmouseout="cleaninfo('Zr')" class="MetaisdeTransicao">40<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Zr</b></td>
+            <td onmouseover="showinfo('Nb')" onmouseout="cleaninfo('Nb')" class="MetaisdeTransicao">41<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Nb</b></td>
+            <td onmouseover="showinfo('Mo')" onmouseout="cleaninfo('Mo')" class="MetaisdeTransicao">42<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Mo</b></td>
+            <td onmouseover="showinfo('Tc')" onmouseout="cleaninfo('Tc')" class="MetaisdeTransicao">43<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Tc</b></td>
+            <td onmouseover="showinfo('Ru')" onmouseout="cleaninfo('Ru')" class="MetaisdeTransicao">44<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ru</b></td>
+            <td onmouseover="showinfo('Rh')" onmouseout="cleaninfo('Rh')" class="MetaisdeTransicao">45<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Rh</b></td>
+            <td onmouseover="showinfo('Pd')" onmouseout="cleaninfo('Pd')" class="MetaisdeTransicao">46<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Pd</b></td>
+            <td onmouseover="showinfo('Ag')" onmouseout="cleaninfo('Ag')" class="MetaisdeTransicao">47<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ag</b></td>
+            <td onmouseover="showinfo('Cd')" onmouseout="cleaninfo('Cd')" class="MetaisdeTransicao">48<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cd</b></td> 
+            <td onmouseover="showinfo('In')" onmouseout="cleaninfo('In')" class="OutrosMetais">49<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>In</b></td>
+            <td onmouseover="showinfo('Sn')" onmouseout="cleaninfo('Sn')" class="OutrosMetais">50<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Sn</b></td>
+            <td onmouseover="showinfo('Sb')" onmouseout="cleaninfo('Sb')" class="SemiMetais">51<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Sb</b></td>
+            <td onmouseover="showinfo('Te')" onmouseout="cleaninfo('Te')" class="SemiMetais">52<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Te</b></td>
+            <td onmouseover="showinfo('I')" onmouseout="cleaninfo('I')" class="Halogenios">53<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>I</b></td>
+            <td onmouseover="showinfo('Xe')" onmouseout="cleaninfo('Xe')" class="GasesNobres">54<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Xe</b></td>
+        </tr>   
+        <tr>
+            <td onmouseover="showinfo('Cs')" onmouseout="cleaninfo('Cs')" class="MetaisAlcalinos">55<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cs</b></td>
+            <td onmouseover="showinfo('Ba')" onmouseout="cleaninfo('Ba')" class="MetaisAlcalino_Terrosos">56<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ba</b></td>
+            <td style="border-style: none;font-weight: 900;">57-71</td>
+            <td onmouseover="showinfo('Hf')" onmouseout="cleaninfo('Hf')" class="MetaisdeTransicao">72<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Hf</b></td>
+            <td onmouseover="showinfo('Ta')" onmouseout="cleaninfo('Ta')" class="MetaisdeTransicao">73<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ta</b></td>
+            <td onmouseover="showinfo('W')" onmouseout="cleaninfo('W')" class="MetaisdeTransicao">74<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>W</b></td>
+            <td onmouseover="showinfo('Re')" onmouseout="cleaninfo('Re')" class="MetaisdeTransicao">75<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Re</b></td>
+            <td onmouseover="showinfo('Os')" onmouseout="cleaninfo('Os')" class="MetaisdeTransicao">76<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Os</b></td>
+            <td onmouseover="showinfo('Ir')" onmouseout="cleaninfo('Ir')" class="MetaisdeTransicao">77<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ir</b></td>
+            <td onmouseover="showinfo('Pt')" onmouseout="cleaninfo('Pt')" class="MetaisdeTransicao">78<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Pt</b></td>
+            <td onmouseover="showinfo('Au')" onmouseout="cleaninfo('Au')" class="MetaisdeTransicao">79<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Au</b></td>
+            <td onmouseover="showinfo('Hg')" onmouseout="cleaninfo('Hg')" class="MetaisdeTransicao">80<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Hg</b></td> 
+            <td onmouseover="showinfo('Tl')" onmouseout="cleaninfo('Tl')" class="OutrosMetais">81<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Tl</b></td>
+            <td onmouseover="showinfo('Pb')" onmouseout="cleaninfo('Pb')" class="OutrosMetais">82<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Pb</b></td>
+            <td onmouseover="showinfo('Bi')" onmouseout="cleaninfo('Bi')" class="OutrosMetais">83<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Bi</b></td>
+            <td onmouseover="showinfo('Po')" onmouseout="cleaninfo('Po')" class="SemiMetais">84<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Po</b></td>
+            <td onmouseover="showinfo('At')" onmouseout="cleaninfo('At')" class="Halogenios">85<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>At</b></td>
+            <td onmouseover="showinfo('Rn')" onmouseout="cleaninfo('Rn')" class="GasesNobres">86<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Rn</b></td>
+        </tr>   
+        <tr>
+            <td onmouseover="showinfo('Fr')" onmouseout="cleaninfo('Fr')" class="MetaisAlcalinos">87<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Fr</b></td>
+            <td onmouseover="showinfo('Ra')" onmouseout="cleaninfo('Ra')" class="MetaisAlcalino_Terrosos">88<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ra</b></td>
+            <td style="border-style: none;font-weight: 900;">89-103</td>
+            <td onmouseover="showinfo('Rf')" onmouseout="cleaninfo('Rf')" class="MetaisdeTransicao">104<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Rf</b></td>
+            <td onmouseover="showinfo('Db')" onmouseout="cleaninfo('Db')" class="MetaisdeTransicao">105<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Db</b></td>
+            <td onmouseover="showinfo('Sg')" onmouseout="cleaninfo('Sg')" class="MetaisdeTransicao">106<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Sg</b></td>
+            <td onmouseover="showinfo('Bh')" onmouseout="cleaninfo('Bh')" class="MetaisdeTransicao">107<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Bh</b></td>
+            <td onmouseover="showinfo('Hs')" onmouseout="cleaninfo('Hs')" class="MetaisdeTransicao">108<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Hs</b></td>
+            <td onmouseover="showinfo('Mt')" onmouseout="cleaninfo('Mt')" class="MetaisdeTransicao">109<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Mt</b></td>
+            <td onmouseover="showinfo('Ds')" onmouseout="cleaninfo('Ds')" class="MetaisdeTransicao">110<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ds</b></td>
+            <td onmouseover="showinfo('Rg')" onmouseout="cleaninfo('Rg')" class="MetaisdeTransicao">111<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Rg</b></td>
+            <td onmouseover="showinfo('Cn')" onmouseout="cleaninfo('Cn')" class="MetaisdeTransicao">112<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Cn</b></td> 
+            <td onmouseover="showinfo('Nh')" onmouseout="cleaninfo('Nh')" class="OutrosMetais">113<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Nh</b></td>
+            <td onmouseover="showinfo('Fl')" onmouseout="cleaninfo('Fl')" class="OutrosMetais">114<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Fl</b></td>
+            <td onmouseover="showinfo('Mc')" onmouseout="cleaninfo('Mc')" class="OutrosMetais">115<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Mc</b></td>
+            <td onmouseover="showinfo('Lv')" onmouseout="cleaninfo('Lv')" class="OutrosMetais">116<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Lv</b></td>
+            <td onmouseover="showinfo('Ts')" onmouseout="cleaninfo('Ts')" class="Halogenios">117<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ts</b></td>
+            <td onmouseover="showinfo('Og')" onmouseout="cleaninfo('Og')" class="GasesNobres">118<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Og</b></td>
+        </tr>   
+        <tr>
+            <td colspan="18" style="border-style: none;"></td>
+        </tr>
+        <tr>
+            <td colspan="3" style="border-style: none;"></td>
+            <td onmouseover="showinfo('La')" onmouseout="cleaninfo('La')" class="Lantanideos">57<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>La</b></td>
+            <td onmouseover="showinfo('Ce')" onmouseout="cleaninfo('Ce')" class="Lantanideos">58<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ce</b></td>
+            <td onmouseover="showinfo('Pr')" onmouseout="cleaninfo('Pr')" class="Lantanideos">59<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Pr</b></td>
+            <td onmouseover="showinfo('Nd')" onmouseout="cleaninfo('Nd')" class="Lantanideos">60<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Nd</b></td>
+            <td onmouseover="showinfo('Pm')" onmouseout="cleaninfo('Pm')" class="Lantanideos">61<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Pm</b></td>
+            <td onmouseover="showinfo('Sm')" onmouseout="cleaninfo('Sm')" class="Lantanideos">62<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Sm</b></td>
+            <td onmouseover="showinfo('Eu')" onmouseout="cleaninfo('Eu')" class="Lantanideos">63<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Eu</b></td>
+            <td onmouseover="showinfo('Gd')" onmouseout="cleaninfo('Gd')" class="Lantanideos">64<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Gd</b></td>
+            <td onmouseover="showinfo('Tb')" onmouseout="cleaninfo('Tb')" class="Lantanideos">65<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Tb</b></td> 
+            <td onmouseover="showinfo('Dy')" onmouseout="cleaninfo('Dy')" class="Lantanideos">66<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Dy</b></td>
+            <td onmouseover="showinfo('Ho')" onmouseout="cleaninfo('Ho')" class="Lantanideos">67<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ho</b></td>
+            <td onmouseover="showinfo('Er')" onmouseout="cleaninfo('Er')" class="Lantanideos">68<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Er</b></td>
+            <td onmouseover="showinfo('Tm')" onmouseout="cleaninfo('Tm')" class="Lantanideos">69<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Tm</b></td>
+            <td onmouseover="showinfo('Yb')" onmouseout="cleaninfo('Yb')" class="Lantanideos">70<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Yb</b></td>
+            <td onmouseover="showinfo('Lu')" onmouseout="cleaninfo('Lu')" class="Lantanideos">71<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Lu</b></td>
+        </tr>   
+        <tr>
+            <td colspan="3" style="border-style: none;"></td>
+            <td onmouseover="showinfo('Ac')" onmouseout="cleaninfo('Ac')" class="Actinidios">89<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Ac</b></td>
+            <td onmouseover="showinfo('Th')" onmouseout="cleaninfo('Th')" class="Actinidios">90<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Th</b></td>
+            <td onmouseover="showinfo('Pa')" onmouseout="cleaninfo('Pa')" class="Actinidios">91<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Pa</b></td>
+            <td onmouseover="showinfo('U')" onmouseout="cleaninfo('U')" class="Actinidios">92<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>U</b></td>
+            <td onmouseover="showinfo('Np')" onmouseout="cleaninfo('Np')" class="Actinidios">93<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Np</b></td>
+            <td onmouseover="showinfo('Pu')" onmouseout="cleaninfo('Pu')" class="Actinidios">94<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Pu</b></td>
+            <td onmouseover="showinfo('Am')" onmouseout="cleaninfo('Am')" class="Actinidios">95<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Am</b></td>
+            <td onmouseover="showinfo('Cm')" onmouseout="cleaninfo('Cm')" class="Actinidios">96<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cm</b></td>
+            <td onmouseover="showinfo('Bk')" onmouseout="cleaninfo('Bk')" class="Actinidios">97<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Bk</b></td> 
+            <td onmouseover="showinfo('Cf')" onmouseout="cleaninfo('Cf')" class="Actinidios">98<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Cf</b></td>
+            <td onmouseover="showinfo('Es')" onmouseout="cleaninfo('Es')" class="Actinidios">99<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>Es</b></td>
+            <td onmouseover="showinfo('Fm')" onmouseout="cleaninfo('Fm')" class="Actinidios">100<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Fm</b></td>
+            <td onmouseover="showinfo('Md')" onmouseout="cleaninfo('Md')" class="Actinidios">101<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Md</b></td>
+            <td onmouseover="showinfo('No')" onmouseout="cleaninfo('No')" class="Actinidios">102<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>No</b></td>
+            <td onmouseover="showinfo('Lr')" onmouseout="cleaninfo('Lr')" class="Actinidios">103<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Lr</b></td>
+        </tr>    
+     
+    </table>
+</body>
+</html>
