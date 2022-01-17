@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dangrek&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background-image: url(img/Design\ sem\ nome.png);
+        background-size: cover;
+        font-family: 'Dangrek', cursive;
+    }
+    table {
+        width: 400px;
+        border-spacing: 20px;
+        background-color: rgb(157,157,158);
+        border-radius: 2%;
+        padding: 21px;
+        border: 1px solid black;
+        box-shadow: black 15px 15px 10px;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    tr, td {
+        text-align: center;
+        font-size: 27px;
+        font-weight: 200;
+    }
+
+    .symbol {
+        text-align: left;
+        font-size: 20px;
+        text-decoration: underline;
+        color: rgb(70,70,70);
+    }
+
+    .title {
+        font-size: 35px;
+        color: white;
+    }
+
+    .screen {
+        background-color: RGB(178, 201, 155);
+        padding: 33px;
+        border: 1px solid black;
+        box-shadow: black 5px 5px 10px;
+    }
+    
+    .class1 {
+        color: black;
+        background-color:RGB(212, 212, 210);
+        border-radius: 7%;
+    }
+
+    .class1:hover {
+        background-color:RGBa(212, 212, 210,0.1);
+    }
+
+    .class2 {
+        color: white;
+        background-color:RGB(28, 28, 28);
+        border-radius: 7%;
+    }
+
+    .class2:hover {
+        background-color:RGBa(28, 28, 28,0.3);
+    }
+
+    .class3 {
+        color: white;
+        background-color:RGB(80, 80, 80);
+        border-radius: 7%;
+    }
+
+    .class3:hover {
+        background-color:RGBa(80, 80, 80,0.3);
+    }
+
+    .class4 {
+        color: black;
+        background-color:RGB(255, 149, 0);
+        border-radius: 7%; 
+    }
+
+    .class4:hover {
+        background-color:RGBa(255, 149, 0,0.3);
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+        cursor: pointer;
+        box-shadow: black 5px 5px 10px;                      
+    }
+</style>
+
+<script>
+        let dot = false;
+        let result = false;
+        let calculation = n;
+
+    //mostrar tecla no ecra 
+    function showsreen(n) {
+        let val = document.getElementById('display').innerHTML;
+        let lastpos = val.length -1;
+        let controlop = val[lastpos] == '/' || val[lastpos] == '*' || val[lastpos] == '+' || val[lastpos] == '-';    
+        
+        if (result == true) { //limpar o screen antes de fazer novo calculation
+                n = '';             
+                result = false;
+            }
+    
+        switch (n) {
+        case '.':  // nao permitir mais que um .
+            if (dot == true) {
+                n = ''; //quando o . já foi acionado anteriormente               
+            } else {
+                dot = true; //quando o . ainda nao foi acionado nenhuma vez
+            }
+           break;
+        case '0':
+            if (val[0] == '0' && val.length == 1) {  //nao permitir mais que um 0 à esquerda do .
+                n = '';
+            }
+           break;
+        case '/': 
+            if (val.length == 0 || val[0] == '-' && val.length == 1) {  //nao deixar inserir nenhum operador no inicio do calculation
+                n = '';
+            } else if (controlop) { //controlar os operadores
+                dot = false;
+                val.pop()
+                document.getElementById('display').innerHTML = val;
+            }
+           break;
+        case '*':
+        if (val.length == 0 || val[0] == '-' && val.length == 1) {
+                n = '';
+            } else if (controlop) {
+                dot = false;
+                val.pop();                 
+                document.getElementById('display').innerHTML = val;
+            }
+            break;
+        case '-':
+        if (controlop) {
+                dot = false;
+                val.pop();
+                document.getElementById('display').innerHTML = val;
+            } 
+            break;
+        case '+':
+        if (val.length == 0 || val[0] == '-' && val.length == 1) {
+                n = '';
+            } else if (controlop) {
+                dot = false;
+                val.pop();
+                document.getElementById('display').innerHTML = val;
+            }     
+            break;
+        }  
+        document.getElementById('display').innerHTML += n;
+
+        }
+
+    //apagar tecla
+    function del() {
+        let val = document.getElementById('display').innerHTML;
+        //let y = val.substr(0,val.length-1);
+        let y = val.pop();
+        //document.getElementById('display').innerHTML = y;
+        document.getElementById('display').innerHTML = y;  
+    }
+
+    //limpar tudo
+    function reset() {
+        document.getElementById('display').innerHTML = '';
+    }
+
+    //calcular
+    function calc() {
+        let val = document.getElementById('display').innerHTML;
+        let z = parseFloat(eval(val));
+        let x = Math.round(z*1000)/1000;
+       if (val.length > 1) {
+            document.getElementById('display').innerHTML = x; //para calcular sem bugs
+            result = true; // ao carregar no = nao aparecer o NaN
+       }
+
+    }
+</script>
+<body>
+    <table>
+        <caption class="title">Casio Calculator</caption>
+        <tr>
+            <td class="symbol" colspan="4"><i class="fas fa-calculator"></i>&nbsp;CASIO</td>
+        </tr>
+        <tr>
+            <td class="screen" colspan="4">
+                <div style="width: 237px;overflow: hidden;" id="display"></div>
+            </td>
+        </tr>
+        <tr>
+            <td><button onclick="showsreen('(')" class="class1" type="button">&lpar;</button></td>
+            <td><button onclick="showsreen(')')" class="class1" type="button">&rpar;</button></td>
+            <td><button onclick="reset()" class="class1" type="button">C</button></td>
+            <td><button onclick="del()" class="class1" type="button">&lArr;</button></td>
+        </tr>   
+        <tr>
+            <td><button onclick="showsreen('7')" class="class2" type="button">7</button></td>
+            <td><button onclick="showsreen('8')" class="class2" type="button">8</button></td>
+            <td><button onclick="showsreen('9')" class="class2" type="button">9</button></td>
+            <td><button onclick="showsreen('/')" class="class3" type="button">&divide;</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="showsreen('4')" class="class2" type="button">4</button></td>
+            <td><button onclick="showsreen('5')" class="class2" type="button">5</button></td>
+            <td><button onclick="showsreen('6')" class="class2" type="button">6</button></td>
+            <td><button onclick="showsreen('*')" class="class3" type="button">&times;</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="showsreen('1')" class="class2" type="button">1</button></td>
+            <td><button onclick="showsreen('2')" class="class2" type="button">2</button></td>
+            <td><button onclick="showsreen('3')" class="class2" type="button">3</button></td>
+            <td><button onclick="showsreen('-')" class="class3" type="button">&ndash;</button></td>
+        </tr> 
+        <tr>
+            <td><button onclick="showsreen('.')" class="class1" type="button">&comma;</button></td>
+            <td><button onclick="showsreen('0')" class="class2" type="button">0</button></td>
+            <td><button onclick="calc()" class="class4" type="button">&equals;</button></td>
+            <td><button onclick="showsreen('+')" class="class3" type="button">&plus;</button></td>
+        </tr>
+    </table>
+</body>
+</html>
