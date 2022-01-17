@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Galo</title>
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barrio&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0 auto;
+        font-family: 'Barrio', cursive;
+        background-image: url(img/JOGO\ DO\ GALO.png);
+        background-size: cover;
+        background-attachment: fixed;
+        font-size: 35px;
+        color: white;
+    }
+
+    table {
+        float: right;
+        margin-top: 40px;
+        margin-right: 350px;
+    }
+
+    td {
+        padding: 35px;
+        text-align: center;
+        width: 80px;
+        height: 80px;
+    }
+
+    td:hover {
+        box-shadow: 5px 5px 25px white;
+        border-radius: 15%;
+    }
+
+    .button1, .button2 {
+        font-family: 'Barrio', cursive;
+        font-size: 25px;
+        cursor: pointer;
+        color: white;
+        background-color: rgb(7,33,82);
+        padding: 10px;
+        border-radius: 10%;
+    }
+
+    .button1 {
+        margin-left: 200px;
+        margin-right: 10px;
+    }
+
+    .button1:hover, .button2:hover {
+        background-color: rgba(7,33,82,0.1);
+        box-shadow: 5px 5px 25px white;
+        transform: scale(1.2,1.2);
+        transition-duration: 0.5s;
+    }
+
+    .players {
+        color: white;
+        margin-left: 200px;
+        margin-top: 450px;
+    }
+
+    .left {
+        border-bottom: 5px solid white;
+        border-right: 5px solid white ;
+    }
+
+    .leftbottom {
+        border-bottom: 0;
+    }
+
+    .midle {
+        border-bottom: 5px solid white;
+    }
+
+    .midlebottom {
+        border-bottom: 0;
+    }
+
+    .right {
+        border-bottom: 5px solid white;
+        border-left: 5px solid white;
+    }
+
+    .rightbottom {
+        border-bottom: 0;
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <td class="left"></td>
+            <td class="midle"></td>
+            <td class="right"></td>
+        </tr>
+        <tr>
+            <td class="left"></td>
+            <td class="midle"></td>
+            <td class="right"></td>
+        </tr>
+        <tr> 
+            <td class="left leftbottom"></td>
+            <td class="midle midlebottom"></td>
+            <td class="right rightbottom"></td>
+        </tr>
+    </table>
+    <br/>
+    <div class="players">
+        Jogador 1 - x
+        <br/>
+        Jogador 2 - o
+    </div>
+    <br/>
+    <div>
+        <button class="button1" type="reset" value="Reset">REINICIAR</button>
+        <button class="button2" type="button" value="play">JOGAR</button>
+    </div>
+</body>
+</html>
